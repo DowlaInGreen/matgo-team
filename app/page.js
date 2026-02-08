@@ -53,6 +53,7 @@ export default function Home() {
     { href: '#usluge', label: 'Usluge' },
     { href: '#projekti', label: 'Projekti' },
     { href: '#zasto-mi', label: 'Zašto mi?' },
+    { href: '/savjeti', label: '📚 Savjeti', isHighlighted: true },
     { href: '#kontakt', label: 'Kontakt' }
   ]
 
@@ -153,7 +154,11 @@ export default function Home() {
               <a
                 key={i}
                 href={link.href}
-                className="no-underline text-gray-600 font-medium text-[15px] hover:text-primary transition-colors"
+                className={`no-underline font-medium text-[15px] transition-colors ${
+                  link.isHighlighted 
+                    ? 'text-primary bg-primary/10 px-3 py-1.5 rounded-full hover:bg-primary/20' 
+                    : 'text-gray-600 hover:text-primary'
+                }`}
               >
                 {link.label}
               </a>
@@ -479,6 +484,74 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Savjeti Section - Istaknuto */}
+      <section className="py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-0">
+              {/* Content */}
+              <div className="p-10 lg:p-14 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 w-fit">
+                  📚 Novo na stranici
+                </div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                  Savjeti i česta pitanja
+                </h2>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Prije nego krenete u renovaciju, educirajte se! Pripremili smo 
+                  <strong> 60+ detaljnih odgovora</strong> na najčešća pitanja o 
+                  keramici, elektroinstalacijama, žbukanju, podovima i adaptaciji kupaonice.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {[
+                    'Keramičarski radovi',
+                    'Elektroinstalacije', 
+                    'Žbukanje i gletanje',
+                    'Podovi i parket',
+                    'Adaptacija kupaonice',
+                    'Soboslikarski radovi'
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-gray-600">
+                      <CheckCircle2 size={16} className="text-primary shrink-0" />
+                      <span className="text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <a 
+                  href="/savjeti" 
+                  className="btn-primary w-fit"
+                >
+                  Pročitaj savjete
+                  <ArrowRight size={18} />
+                </a>
+              </div>
+
+              {/* Visual */}
+              <div className="bg-gradient-to-br from-primary to-primary-dark p-10 lg:p-14 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+                }}></div>
+                
+                <div className="relative text-center text-white">
+                  <div className="text-7xl mb-4">📖</div>
+                  <div className="text-5xl font-bold mb-2">60+</div>
+                  <div className="text-xl text-white/90">pitanja i odgovora</div>
+                  <div className="mt-6 flex flex-wrap justify-center gap-2">
+                    {['Besplatno', 'Edukativno', 'Praktično'].map((tag, i) => (
+                      <span key={i} className="bg-white/20 px-3 py-1 rounded-full text-sm">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
