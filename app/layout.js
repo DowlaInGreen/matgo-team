@@ -16,12 +16,12 @@ const openSans = Open_Sans({
 })
 
 export const metadata = {
-  title: 'MAT GO team d.o.o. | Adaptacija i izgradnja - Zagreb, Hrvatska',
-  description: 'MAT GO team d.o.o. - Vaš pouzdani partner za adaptaciju i izgradnju stambenih i poslovnih objekata u Zagrebu i okolici. Profesionalno, pouzdano i prilagođeno vašim potrebama.',
-  keywords: 'adaptacija, izgradnja, renovacija, građevina, Zagreb, Hrvatska, MAT GO team, gradnja kuće, adaptacija stana, poslovni prostor',
-  authors: [{ name: 'MAT GO team d.o.o.' }],
-  creator: 'MAT GO team d.o.o.',
-  publisher: 'MAT GO team d.o.o.',
+  title: 'MAT-GO TEAM j.d.o.o. | Završni građevinski radovi Zagreb',
+  description: 'MAT-GO TEAM j.d.o.o. - Profesionalni završni građevinski radovi u Zagrebu i okolici. Keramičarski radovi, adaptacije kupaonice, žbukanje, gletanje, podovi. Besplatna procjena!',
+  keywords: 'završni građevinski radovi, keramičarski radovi, adaptacija kupaonice, žbukanje, gletanje, podovi, laminat, parket, Zagreb, MAT-GO TEAM, renovacija, soboslikarski radovi',
+  authors: [{ name: 'MAT-GO TEAM j.d.o.o.' }],
+  creator: 'MAT-GO TEAM j.d.o.o.',
+  publisher: 'MAT-GO TEAM j.d.o.o.',
   formatDetection: {
     email: false,
     address: false,
@@ -32,26 +32,26 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'MAT GO team d.o.o. | Adaptacija i izgradnja',
-    description: 'Vaš pouzdani partner za adaptaciju i izgradnju stambenih i poslovnih objekata u Zagrebu.',
+    title: 'MAT-GO TEAM j.d.o.o. | Završni građevinski radovi',
+    description: 'Profesionalni završni građevinski radovi u Zagrebu. Keramika, adaptacije, žbukanje, podovi. Besplatna procjena!',
     url: 'https://matgo-team.online',
-    siteName: 'MAT GO team d.o.o.',
+    siteName: 'MAT-GO TEAM j.d.o.o.',
     locale: 'hr_HR',
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/boravak.png',
         width: 1200,
         height: 630,
-        alt: 'MAT GO team d.o.o. - Adaptacija i izgradnja',
+        alt: 'MAT-GO TEAM - Završni građevinski radovi',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MAT GO team d.o.o. | Adaptacija i izgradnja',
-    description: 'Vaš pouzdani partner za adaptaciju i izgradnju stambenih i poslovnih objekata u Zagrebu.',
-    images: ['/og-image.jpg'],
+    title: 'MAT-GO TEAM j.d.o.o. | Završni građevinski radovi',
+    description: 'Profesionalni završni građevinski radovi u Zagrebu. Keramika, adaptacije, žbukanje, podovi.',
+    images: ['/images/boravak.png'],
   },
   robots: {
     index: true,
@@ -63,9 +63,6 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
 }
 
